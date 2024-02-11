@@ -9,5 +9,8 @@ class CourseAdmin(admin.ModelAdmin):
 
 admin.site.register(Course)
 
-
+admin.site.register(ClassSchedule)
+admin.site.register(ClassAttendance)
+admin.site.register(Query)
+admin.site.register(QueryComment)
 
