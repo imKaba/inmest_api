@@ -35,8 +35,8 @@ class Cohort(models.Model):
         return self.name
 
 class CohortMember(models.Model):
-    cohort = models.ForeignKey(Cohort, on_delete=models.CASCADE, related_name='cohorts')
-    member = models.ForeignKey(IMUser, on_delete=models.CASCADE, related_name='members')
+    cohort = models.ForeignKey(Cohort, on_delete=models.CASCADE)
+    member = models.ForeignKey(IMUser, on_delete=models.CASCADE)
     is_active = models.BooleanField(default=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
