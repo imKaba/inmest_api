@@ -15,7 +15,6 @@ class IMUser(models.Model):
     is_active = models.BooleanField(default=True)
     user_type = models.CharField(max_length=20, choices=USER_TYPES)
     date_created = models.DateTimeField(auto_now_add=True)
-    # Add any extra fields here if needed
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
